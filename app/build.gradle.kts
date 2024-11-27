@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp)
+    alias(libs.plugins.kapt)
     alias(libs.plugins.hilt)
 }
 
@@ -35,8 +35,13 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain:accounts"))
+    implementation(project(":model:common"))
+
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
     implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
+    kapt(libs.hilt.android.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
