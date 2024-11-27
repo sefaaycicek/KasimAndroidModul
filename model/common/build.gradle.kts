@@ -36,6 +36,8 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
+    implementation(libs.converter.gson)
+
     implementation(libs.room)
     implementation(libs.roomKtx)
     kapt(libs.roomCompiler)

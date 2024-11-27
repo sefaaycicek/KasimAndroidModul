@@ -2,6 +2,8 @@ package com.sirketismi.accounts.di
 
 import com.sirketismi.accounts.dao.NoteDao
 import com.sirketismi.accounts.db.AppDatabase
+import com.sirketismi.accounts.repository.ApiRepository
+import com.sirketismi.accounts.repository.IApiRepository
 import com.sirketismi.accounts.repository.INoteRepository
 import com.sirketismi.accounts.repository.NoteRepository
 import dagger.Binds
@@ -24,4 +26,7 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindRepository(imlp: NoteRepository): INoteRepository
+
+    @Binds
+    abstract fun bindApiRepository(imlp: ApiRepository): IApiRepository
 }
