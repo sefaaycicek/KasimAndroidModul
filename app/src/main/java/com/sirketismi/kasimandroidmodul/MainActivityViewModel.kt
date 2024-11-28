@@ -10,6 +10,7 @@ import com.sirketismi.accounts.repository.INoteRepository
 import com.sirketismi.common.NoteEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
